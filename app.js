@@ -19,7 +19,7 @@ app.use('/auth', authRoutes)
 app.use('/post', postRoutes)
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+    res.send('Welcome!')
 })
 
 mongoose.connect(process.env.DB_CONNECTION, {
@@ -37,5 +37,5 @@ db.once('open', () => {
 })
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`)
+    console.log(`Server running on port ${process.env.PORT}`)
 })
